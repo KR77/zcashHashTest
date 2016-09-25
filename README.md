@@ -5,11 +5,11 @@ Note: 25 Sep 2016: The script is known to work with zcash v1.0.0-beta1. Due to r
   https://github.com/zcash/zcash/commit/65b502aa98d892e9d0c9abceeeed8d0a5bd717a3
 
 ### Quickstart 
-Start the zcash daemon (like: ~/zcash/src/zcashd -daemon).
-Stop the zcash mining activity (like: ~/zcash/src/zcash-cli setgenerate false)
-Start tests like: nohup zcashHashTest.sh &
-Wait... a while...
-Veiw nohup.out or individual test files for results.
+1. Start the zcash daemon (like: ~/zcash/src/zcashd -daemon).
+2. Stop the zcash mining activity (like: ~/zcash/src/zcash-cli setgenerate false)
+3. Start tests like: nohup zcashHashTest.sh &
+4. Wait... a while...
+5. Veiw nohup.out or individual test files for results.
 
 Note: If the zcash daemon dies during the test, inspect the output files and removed completed threads from THREADS variable.
 
