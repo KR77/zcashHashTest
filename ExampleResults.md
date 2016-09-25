@@ -20,7 +20,8 @@ The computer described below produced the summary at the bottom of this page.
 
 ### Example Summary
 For the following variable settings:
-PROBLEMS=(50)
-THREADS=(1 2 3 4 5 6 7 8 9 10 11 12)
 
-...results incoming...
+    PROBLEMS=(50)
+    THREADS=(1 2 3 4 5 6 7 8 9 10 11 12)
+    
+    ...results incoming...
