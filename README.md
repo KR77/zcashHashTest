@@ -15,25 +15,28 @@ Note: If the zcash daemon dies during the test, inspect the output files and rem
 
 ### Example Output
 Example summary for the following variable settings:
-PROBLEMS=(8)
-THREADS=(1 2 4 8)
 
-user@host:~$ tail -n 2 zcashHashTest/zcashHashTest.p8.t*
-==> zcashHashTest/zcashHashTest.P8.T1.log <==
-avg: 29.17375
-hashes/sec: 0.068554779553537
-
-==> zcashHashTest/zcashHashTest.P8.T2.log <==
-avg: 46.599375
-hashes/sec: 0.0429190305663971
-
-==> zcashHashTest/zcashHashTest.P8.T4.log <==
-avg: 60.1715625
-hashes/sec: 0.0332382925904575
-
-==> zcashHashTest/zcashHashTest.P8.T8.log <==
-avg: 134.875625
-hashes/sec: 0.0148284762350499
+    PROBLEMS=(8)
+    THREADS=(1 2 4 8)
+    
+    user@host:~$ tail -n 2 zcashHashTest/zcashHashTest.p8.t*
+    ==> zcashHashTest/zcashHashTest.P8.T1.log <==
+    avg: 29.17375
+    hashes/sec: 0.068554779553537
+    
+    ==> zcashHashTest/zcashHashTest.P8.T2.log <==
+    avg: 46.599375
+    hashes/sec: 0.0429190305663971
+    
+    ==> zcashHashTest/zcashHashTest.P8.T4.log <==
+    avg: 60.1715625
+    hashes/sec: 0.0332382925904575
+    
+    ==> zcashHashTest/zcashHashTest.P8.T8.log <==
+    avg: 134.875625
+    hashes/sec: 0.0148284762350499
 
 ### Interpretting Results
-A low average time and high hashes/sec is desired. Due to the current implementation of zcbenchmark
+A low average problem completion time and high hashes/sec is desired along with full resource usage. The key resource for Equihash appears to be memory bandwidth. 
+
+As of 25 Sep 2016, it is unclear to me whether zcbenchmark with multiple threads uses resources in the same manner as the zcash miner.
